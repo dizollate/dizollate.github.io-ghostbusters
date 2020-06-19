@@ -1,0 +1,655 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1130;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	}
+
+
+@import "header.scss";
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+.film {
+	border-bottom: 1px solid #D4D4D4;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.container {
+	max-width: 1130px;
+	margin: 0 auto;
+
+}
+.film-wrapper {
+	@include flexbox();
+}
+.film-trailer {
+	@include flexbox();
+	flex-direction: column;
+	margin: 0 60px 0 0;
+}
+.poster {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	width: 358px;
+	height: 100%;
+}
+.trailer-button {
+	background-color: #fff;
+	border: 1px solid #D4D4D4;
+	border-radius: 0 0 5px 5px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	cursor: pointer;
+	text-align: center;
+
+}
+.trailer-button-icon, .trailer-button-text {
+	vertical-align: middle;
+}
+.trailer-button-text {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+color: #5671F6;
+}
+.trailer-button-icon {
+	margin-right: 14px;
+}
+
+.film-text {}
+.film-title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+	color: #363636;
+	margin: 0 0 16px 0;
+}
+.film-subtitle {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	color: #A5A5A5;
+	margin: 32px 0 32px 0;
+}
+.film-description {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 150%;
+	color: #000000;
+	max-width: 514px;
+	margin: 32px 0 50px 0;
+}
+.about-film {
+	@include flexbox();
+	margin:  0 0 55px 0;
+}
+.left-side {
+	margin-right: 40px;
+}
+.about-text {
+	@include flexbox();
+	flex-wrap: wrap;
+	margin: 0 0 16px 0;
+}
+.about-text-bold {
+	display: block;
+	width: 100px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	color: #363636;
+
+}
+.about-text-regular {
+	display: block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #363636;
+}
+
+.rating {
+	height: 100px;
+	@include flexbox();
+	flex-direction: row;
+	flex-wrap: no-wrap;
+}
+
+.rating-counter {
+	width: 100px;
+	height: 100px;
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #5671F6;
+	border-radius: 10px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 33px;
+	color: #5671F6;
+	margin: 0 28px 0 0;
+}
+.rating-discription {
+	width: 168px;
+	margin: 0 0 0 0;
+	@include flexbox();
+	flex-wrap: wrap;
+	align-item: center;
+}
+
+.rating-title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+	color: #363636;
+	display: block;
+	margin-bottom: 12px;
+	margin-top: 0px;
+}
+.rating-text {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #363636;
+	display: block;
+
+}
+.rating-text-bold {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	color: #363636;
+}
+
+
+.cast {
+	padding-top: 70px;
+	padding-bottom: 100px;
+}
+.container {}
+.tabs {
+	@include flexbox();
+	align-items: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	color: #A5A5A5;
+}
+.section-title {
+	margin-right: 30px;
+}
+.active {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 28px;
+	color: #363636;
+
+}
+
+
+
+.tabs-content {
+	display: none;
+
+	align-item: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	transition: all 0.5s ease 0s;
+}
+
+.tabs-content.visible {
+	@include flexbox();
+	justify-content: space-around;
+}
+.tab {
+	cursor: pointer;
+}
+.card {
+	@include flexbox();
+	align-items: center;
+	flex-basis: 25%;
+	margin-bottom: 35px;
+	 }
+.card-img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 20px;
+}
+.card-text {}
+.hame {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	color: #5671F6;
+	margin: 0 0 6px 0;
+}
+.en-name {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #A5A5A5;
+}
+
+.news {
+	background: #F3F3F3;
+	padding: 70px 0 100px 0;
+}
+
+.section-title {
+	margin-bottom: 60px;
+}
+
+.section-news-title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 900;
+	color: #000000;
+	margin-bottom: 60px;
+}
+
+.news-cards {
+	@include flexbox();
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.news-card {
+	flex-basis: 23%;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 5px;
+}
+.news-date {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+}
+.news-title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	margin-top: 14px;
+}
+
+.button-next {
+display: none;
+}
+
+@media (max-width: 1200px){
+	.container {
+		max-width: 960px;
+	}
+	.card-img {
+		height: 70px;
+		width: 70px;
+	}
+	.header {
+		height: 90px;
+		padding-left: 10px;
+	}
+	.button__signup {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.button__login {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.search__input {
+		margin-left: 20px;
+	}
+	.navigation {
+		margin-right: 20px;
+	}
+	.navigation__link {
+		margin-right: 10px;
+	}
+	.header__logo {
+	margin-left: 15px;
+	width: 68px;
+	}
+	.header__line {
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 991px){
+	.container {
+		max-width: 760px;
+	}
+	input::placeholder {
+	color: #A5A5A5;
+	}
+	.m-menu {
+		width: 100%;
+		height: calc(100%-68px);
+		position: fixed;
+		@include flexbox();
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		left: -200%;
+		transition: all 0.5s ease 0s;
+		top: 90px;
+		right: 0;
+		bottom: 0;
+		padding-bottom: 30%;
+		background-color: #5671F6;
+	}
+	.m-menu.active {
+	left: 0;
+	}
+	.no-scroll {
+		overflow: hidden;
+	}
+	.navigation {
+		margin: 0 auto;
+
+		@include flexbox();
+		flex-direction: column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	.navigation__link {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #fff;
+		margin-bottom: 18px;
+		margin-right: 0;
+	}
+	.navigation__link:last-child {
+		margin-bottom: 0;
+	}
+	.search__input {
+		width: 260px;
+		height: 50px;
+		background-image: none;
+		margin: 0;
+	}
+	.button__signup {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		background-color: transparent;
+		color: #fff;
+		border: none;
+		margin-bottom: 30px;
+	}
+	.button__login {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+	}
+	.film-title {
+		font-size: 24px;
+		line-height: 1.4;
+	}
+	.button__group {
+		flex-direction: column;
+		height: auto;
+	}
+	.film-subtitle {
+		margin-bottom: 20px;
+	}
+	.film-description, .about-film {
+		margin-bottom: 30px;
+	}
+	.card-img {
+		height: 100px;
+		width: 100px;
+	}
+	.card {
+		flex-basis: 50%;
+	}
+	.news-card {
+		height: 50%;
+		flex-basis: 48%;
+		margin-bottom: 20px;
+	}
+	.header__line {
+		display: none;
+	}
+	.mobile-buttons {
+		@include flexbox();
+		margin-left: auto;
+	}
+	.m-menu-button {
+		margin-left: 5%;
+	}
+	.header {
+		padding-right: 2.5%;
+		padding-left: 2.5%;
+	}
+}
+
+@media (max-width: 768px) {
+.button-next {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	z-index: 99;
+	cursor: pointer;
+	display: block;
+}
+	.news-card {
+		max-width: 90%;
+	}
+	.container {
+		max-width: 560px;
+	}
+	.header {
+		height: 80px;
+		padding-right: 5%;
+	}
+	.film {
+		padding-top: 50px;
+		padding-bottom: 60px;
+	}
+	.film-wrapper {
+		flex-wrap: wrap-reverse;
+	}
+	.film-text {
+		margin-bottom: 20px;
+	}
+	.cast {
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+	.news {
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+	.m-menu {
+	top: 80px;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+	.film-trailer {
+		width: 100%;
+
+	}
+	.poster {
+		width: 100%;
+	}
+	.film-wrapper {
+	flex-wrap: wrap;
+	}
+	.film-title {
+		font-size: 20px;
+		line-height: 23px;
+		margin-bottom: 12px;
+		margin-top: 5%;
+	}
+	.film-subtitle {
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 26px;
+	}
+	.film-discription {
+	font-size: 14px;
+	line-height: 150%;
+	margin-bottom: 40px;
+	}
+	.about-film {
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+	}
+	.about-text {
+	margin-bottom: 16px;
+	}
+	.film-trailer {
+		margin-bottom: 5%;
+	}
+	.card {
+		flex-basis: 100%;
+		margin-bottom: 20px;
+	}
+	.card-img {
+		width: 60px;
+		height: 60px;
+	}
+	.tabs {
+		margin-bottom: -20px;
+	}
+	.cast {
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.news-card {
+		flex-basis: 100%;
+	}
+}
+
+@media (max-width: 440px){
+		.film-trailer {
+		margin-bottom: 15%;
+	}
+}
+
+@media (max-width: 410px){
+		.film-trailer {
+		margin-bottom: 20%;
+	}
+}
+
+@media (max-width: 350px){
+		.film-trailer {
+		margin-bottom: 30%;
+	}
+}
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+body {
+	font-family: 'Roboto', sans-serif;
+}
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
